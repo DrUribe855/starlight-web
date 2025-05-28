@@ -65,11 +65,6 @@ a{
     transform: scaleX(1);
 }
 
-/* Animación para el menú móvil */
-.navbar__mobile-menu {
-        animation: slideDownMenu 0.4s ease;
-    }
-
 @keyframes slideDownMenu {
     from {
         opacity: 0;
@@ -87,7 +82,8 @@ a{
 }
 
 .navbar__mobile-menu{
-    display: none;
+    display: none !important;
+    animation: slideDownMenu 0.4s ease;
 }
 
 .img-logo{
