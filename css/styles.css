@@ -8,23 +8,88 @@ ul{
     list-style: none;
 }
 
-ul a {
+a{
     text-decoration: none;
-    padding: 2em;
     color: #f1f1f1;
+    justify-content: center;
+    width: 100%;
 }
 
-.nav-container{
-    position: fixed;
-    width: 100%;
+.container-navbar{
     display: flex;
+    padding-top: 1.2em;
+}
+
+.navbar{
+    position: fixed;
+    display: flex;
+    width: 100%;
     justify-content: center;
 }
 
-.nav-items{
+.navbar__nav{
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 1.5em;
+    align-items: center;
+}
+
+.nav__list{
+    display: flex;
+}
+
+.nav__link{
+    margin-left: 40px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.nav__link a{
+    position: relative;
+}
+
+.nav__link a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #7743a8;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.nav__link:hover a::after{
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* Animación para el menú móvil */
+@media(max-width: 375px){
+    .navbar__mobile-menu {
+        animation: slideDownMenu 0.4s ease;
+    }
+
+    @keyframes slideDownMenu {
+        from {
+            opacity: 0;
+            transform: translateY(-80px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+.navbar__toggle-btn{
+    cursor: pointer;
+    display: none;
+}
+
+.navbar__mobile-menu{
+    display: none;
 }
 
 .img-logo{
@@ -38,7 +103,7 @@ ul a {
 }
 
 .img-logo img{
-    max-width: 40%;
+    max-width: 36%;
     height: auto;
     display: block;
 }
@@ -46,6 +111,7 @@ ul a {
 .img-logo p{
     height: 3em;
     color: #f1f1f1;
+    font-size: 1.2em;
 }
 
 .footer-container{
@@ -56,13 +122,13 @@ ul a {
     justify-content: center;
     margin-bottom: 1em;
     color: #f1f1f1;
+    font-size: 1.2em;
 }
 
 .corporation-name{
     color: #7743a8;
     font-weight: bold;
 }
-
 
 #principal-video{
     position: fixed;
@@ -72,3 +138,96 @@ ul a {
     min-height: 100%;
 }
 
+/* ---------- Media Queries ---------- */
+
+/* Telefonos pequeños */
+
+@media(max-width: 375px){
+
+    .nav__list{
+        display: none;
+    }
+
+    .navbar__nav{
+        margin-left: 20px;
+    }
+
+    .navbar__mobile-menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 28px;
+        right: 0;
+        background-color: rgba(22, 19, 19, 0.2);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        z-index: 1;
+    }
+
+    .nav__link-mobile{
+        margin-left: 20px;
+        font-size: 1.1em;
+        font-weight: 500;
+        margin-bottom: 0.5em;
+    }
+
+    .nav__list-mobile{
+        padding: 0.5em; 
+        margin-bottom: 15px; 
+    }
+
+    .nav__link-mobile a::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #7743a8;
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    }
+
+    .nav__link:hover a::after{
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    .navbar__toggle-btn{
+        display: block;
+        margin: 0;
+    }
+
+    .container-navbar{
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar{
+        background-color: rgba(22, 19, 19, 0.2);
+        backdrop-filter: blur(10px);
+        z-index: 1;
+    }
+
+    .img-logo img{
+        max-width: 70%;
+    }
+
+    .img-logo p{
+        font-size: 0.8em;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .footer-container{
+        font-size: 0.9em;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 100%;
+        margin-bottom: 0.6em;
+    }
+
+}

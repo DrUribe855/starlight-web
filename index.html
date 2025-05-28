@@ -13,22 +13,35 @@
     <div>
         <!-- Video de fondo -->
          
-        <video autoplay muted loop id="principal-video">
+        <video autoplay muted loop playsinline id="principal-video">
             <source src="assets/si720.mp4" type="video/mp4">
         </video>
     
         <!-- Menú de navegación  -->
-    
-        <div class="nav-container">
-            <nav>
-                <ul class="nav-items">
-                    <li><a href="#">DISCORD</a></li>
-                    <li><a href="#">HOSTING</a></li>
-                    <li><a href="#">CONECTAR</a></li>
-                    <li><a href="#">NORMATIVAS</a></li>
-                </ul>
+
+        <section class="container-navbar">
+            <nav class="navbar container">
+                <div class="navbar__nav">
+                    <ul class="nav__list">
+                        <li class="nav__link"><a href="#">DISCORD</a></li>
+                        <li class="nav__link"><a href="#">HOSTING</a></li>
+                        <li class="nav__link"><a href="#">SERVICIOS</a></li>
+                        <li class="nav__link"><a href="#">NORMATIVAS</a></li>
+                    </ul>
+                    <div class="navbar__toggle-btn">
+                        <img src="assets/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                    </div>
+                    <div class="navbar__mobile-menu">
+                        <ul class="nav__list-mobile">
+                            <li class="nav__link-mobile"><a href="#">DISCORD</a></li>
+                            <li class="nav__link-mobile"><a href="#">HOSTING</a></li>
+                            <li class="nav__link-mobile"><a href="#">SERVICIOS</a></li>
+                            <li class="nav__link-mobile"><a href="#">NORMATIVAS</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-        </div>
+        </section>
         <div class="img-logo">
             <img src="assets/logo-starlight.png" alt="">
             <p>Este proyecto se encuentra en desarrollo por un equipo colaborativo de programadores. ¡Pronto estará disponible!</p>
@@ -40,5 +53,6 @@
         
     </div>
  
+<script src="scripts/index.js"></script>
 </body>
 </html>
