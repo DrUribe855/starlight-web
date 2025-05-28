@@ -36,6 +36,10 @@ a{
     display: flex;
 }
 
+.nav__list-mobile{
+   display: none; 
+}
+
 .nav__link{
     margin-left: 40px;
     font-size: 1.1em;
@@ -44,6 +48,10 @@ a{
 
 .nav__link a{
     position: relative;
+}
+
+.nav__link a i{
+    padding: 0.4em;
 }
 
 .nav__link a::after{
@@ -83,7 +91,7 @@ a{
 }
 
 .navbar__mobile-menu{
-    display: none;
+    display: flex;
     animation: slideDownMenu 0.4s ease;
 }
 
@@ -144,35 +152,24 @@ a{
 @media(max-width: 375px){
 
     a{
-        font-size: 0.7em;
+        font-size: 1em;
     }
 
     .nav__list{
         display: none;
     }
 
-    .navbar__mobile-menu{
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 28px;
-        right: 0;
-        background-color: rgba(22, 19, 19, 0.2);
-        backdrop-filter: blur(10px);
-        width: 100%;
-        z-index: 1;
-    }
-
     .nav__link-mobile{
         margin-left: 20px;
-        font-size: 1.1em;
+        font-size: 1.2em;
         font-weight: 500;
         margin-bottom: 0.5em;
     }
 
     .nav__list-mobile{
-        padding: 0.5em; 
-        margin-bottom: 15px; 
+        padding-top: 0.5em; 
+        display: flex;
+        gap: 1.5em;
     }
 
     .nav__link-mobile a::after{
@@ -204,12 +201,6 @@ a{
         margin: 0;
     }
 
-    .navbar{
-        background-color: rgba(22, 19, 19, 0.2);
-        backdrop-filter: blur(10px);
-        z-index: 1;
-    }
-
     .img-logo img{
         max-width: 70%;
     }
@@ -234,40 +225,23 @@ a{
 @media(min-width: 376px) and (max-width: 620px){
 
     a{
-        font-size: 0.7em;
+        font-size: 1em;
     }
 
     .nav__list{
         display: none;
     }
 
-    .navbar__mobile-menu{
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 28px;
-        right: 0;
-        background-color: rgba(22, 19, 19, 0.2);
-        backdrop-filter: blur(10px);
-        width: 100%;
-        z-index: 1;
-    }
-
     .nav__link-mobile{
         margin-left: 20px;
-        font-size: 1.1em;
-        font-weight: 500;
+        font-size: 1.4em;
         margin-bottom: 0.5em;
     }
 
     .nav__list-mobile{
-        padding: 0.5em; 
-        margin-bottom: 15px; 
-    }
-
-    .navbar__toggle-btn{
-        display: block;
-        margin: 0;
+        padding-top: 0.5em; 
+        display: flex;
+        gap: 2em;
     }
 
     .container-navbar{
@@ -275,30 +249,25 @@ a{
         margin: 0;
     }
 
-    .navbar{
-        background-color: rgba(22, 19, 19, 0.2);
-        backdrop-filter: blur(10px);
-        z-index: 1;
-    }
-
-    .img-logo{
-        margin-top: 12em;
-    }
-
     .img-logo img{
         max-width: 70%;
     }
 
     .img-logo p{
-        font-size: 1em;
+        font-size: 0.8em;
         text-align: center;
         margin: 0 auto;
         max-width: 90%;
     }
 
     .footer-container{
-        font-size: 0.9em;
+        font-size: 0.7em;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 100%;
+        margin-bottom: 0.6em;
     }
+
 
 
 }
