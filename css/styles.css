@@ -164,7 +164,6 @@ a{
     }
 
     .nav__link-mobile{
-        margin-left: 20px;
         font-size: 1.2em;
         font-weight: 500;
         margin-bottom: 0.5em;
@@ -173,7 +172,7 @@ a{
     .nav__list-mobile{
         padding-top: 0.5em; 
         display: flex;
-        gap: 1.5em;
+        gap: 2.8em;
     }
 
     .nav__link-mobile a::after{
@@ -242,7 +241,6 @@ a{
     }
 
     .nav__link-mobile{
-        margin-left: 20px;
         font-size: 1.4em;
         margin-bottom: 0.5em;
     }
@@ -250,7 +248,7 @@ a{
     .nav__list-mobile{
         padding-top: 0.5em; 
         display: flex;
-        gap: 2em;
+        gap: 2.5em;
     }
 
     .container-navbar{
