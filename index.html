@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="scripts/index.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,24 +23,45 @@
         <section class="container-navbar">
             <nav class="navbar container">
                 <div class="navbar__nav">
+                    <!-- Navegación escritorio -->
                     <ul class="nav__list">
                         <li class="nav__link"><a href="#"><i class="fa-brands fa-discord"></i>DISCORD</a></li>
                         <li class="nav__link"><a href="#"><i class="fa-solid fa-server"></i>HOSTING</a></li>
+                        <li class="nav__link"><a href="#"><i class="fa-solid fa-code"></i>DESARROLLO</a></li>
                         <li class="nav__link"><a href="#"><i class="fa-solid fa-play"></i>CONECTAR</a></li>
-                        <li class="nav__link"><a href="#"><i class="fa-solid fa-gavel"></i>NORMATIVAS</a></li>
                     </ul>
+                    <!-- Navegación móvil -->
                     <ul class="nav__list-mobile">
-                        <li class="nav__link-mobile"><a href="#"><i class="fa-brands fa-discord"></i></a></li>
-                        <li class="nav__link-mobile"><a href="#"><i class="fa-solid fa-server"></i></a></li>
-                        <li class="nav__link-mobile"><a href="#"><i class="fa-solid fa-play"></i></a></li>
-                        <li class="nav__link-mobile"><a href="#"><i class="fa-solid fa-gavel"></i></a></li>
+                        <li class="nav__link-mobile">
+                            <a href="#">
+                                <i class="fa-brands fa-discord"></i> 
+                                <p class="navbar__paragraph">DISCORD</p>
+                            </a>
+                        </li>
+                        <li class="nav__link-mobile">
+                            <a href="#">
+                                <i class="fa-solid fa-server"></i>
+                                <p class="navbar__paragraph">HOSTING</p>
+                            </a>
+                        </li>
+                        <li class="nav__link-mobile">
+                            <a href="#">
+                                <i class="fa-solid fa-code"></i>
+                                <p class="navbar__paragraph">DESARROLLO</p>
+                            </a>
+                        </li>
+                        <li class="nav__link-mobile">
+                            <a href="#">
+                                <i class="fa-solid fa-play"></i>
+                                <p class="navbar__paragraph">CONECTAR</p>
+                            </a>
+                        </li>
                     </ul>
-                    <!-- <div class="navbar__mobile-menu">
-                        
-                    </div> -->
                 </div>
             </nav>
         </section>
+
+        <!-- Icono y texto -->
         <div class="img-logo">
             <img src="assets/logo-starlight.png" alt="">
             <p>Este proyecto se encuentra en desarrollo por un equipo colaborativo de programadores. ¡Pronto estará disponible!</p>
